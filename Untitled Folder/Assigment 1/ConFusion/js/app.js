@@ -1,0 +1,52 @@
+console.log("-In js-");
+
+
+
+
+(function(){
+	"use strict"
+
+	
+	var menu_child = document.getElementsByClassName("dropdown-menu")[0];
+	var nav_child = document.getElementsByClassName("navbar-nav")[0]
+	
+	menu_child.children[0].children[0].innerHTML = "Appetizers"
+	menu_child.children[1].children[0].innerHTML = "Main Courses"
+	menu_child.children[2].children[0].innerHTML = "Desserts"
+	menu_child.children[3].children[0].innerHTML = "Drinks"
+	menu_child.children[6].children[0].innerHTML = "Specials"
+
+	menu_child.children[7].children[0].innerHTML = "Lunch Buffet"
+
+	var introPara = document.getElementById("Ip");
+
+	introPara.innerHTML = "We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!"
+
+	console.log("passed Intro para");
+
+	var div_1 = document.getElementById("div_1");
+	div_1.children[1].innerHTML = "Our Lipsmacking Culinary Creations"; 
+	
+
+		console.log("paseed div_1");
+
+	var div_2 = document.getElementById("div_2");
+	div_2.children[0].innerHTML = "Uthappizza";
+	div_2.children[1].innerHTML = "A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.";
+	div_2.children[2].children[0].innerHTML = "More »";
+
+	console.log("paseed div_2");
+	
+	var h3_2 = document.getElementById("h3_2")
+	h3_2.innerHTML = "This Month's Promotions";
+	
+		console.log("h3_2");
+
+	var h2_1 = document.getElementById("h3_2");
+	h2_1.innerHTML = "Weekend Grand Buffet";
+
+			console.log("h2_1");
+
+
+
+})();

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset = "utf-8"/>
+	<meta name="viewport" content="width=device-width, intial scale=1.0" />
+	<title>Comp125-Lesson2</title>
+	<!-- CSS section -->
+	<link rel="stylesheet" type="text/css" href="content/styles.css">
+</head>
+<body>
+
+	<h1>Hello World!</h1>
+	<p id="firstPara"></p>
+	<!-- Javascript Section -->
+	<script src="scripts/app.js" type="text/javascript" ></script>
+</body>
+</html>

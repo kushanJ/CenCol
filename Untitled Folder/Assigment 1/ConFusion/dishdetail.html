@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="confusionApp">
+
+<head>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ristorante Con Fusion</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap-social.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	    <div class="container">
+	    	<div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" id="r_logo" href="index.html"><img src = "images/logo.png"></a>
+            </div>
+            <div id ="navbar" class="navbar-collapse collapse">
+            	<ul class="nav navbar-nav">
+		            <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"
+                         aria-hidden="true"></span> Home</a></li>
+		            <li><a href="AboutUs.html">About</a></li>
+		            
+	            	<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                         role="button" aria-haspopup="true" aria-expanded="false">
+                         Menu <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header"></li>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                     </li>
+
+		            </li>
+		            <li><a href="#">Contact</a></li>	
+	        	</ul>	
+            </div>
+	        
+	    </div>
+	</nav>     
+
+    <header class="jumbotron">
+
+        <!-- Main component for a primary marketing message or call to action -->
+
+        <div class="container">
+            <div class="row row-header">
+                <div>
+                    <h1>Ristorante con Fusion</h1>
+                    <p style="padding:40px;"></p>
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="row row-content" ng-controller="dishDetailController as Dctrl">
+            <div class="col-xs-12">
+            	<div class="media-left media-middle">
+                	<a href="#">
+	                	<img class="media-object img-thumbnail" ng-src={{Dctrl.dish.image}} alt="Uthappizza">
+	            	    </a>
+	            	</div>
+                <div class="media-body" >
+                	<h2 class="media-heading">{{Dctrl.dish.name}}
+                 		<span class="label label-danger">{{Dctrl.dish.label}}</span>
+                 		<span class="badge">{{Dctrl.dish.price | currency}}</span>
+             		</h2>
+                	<p>{{Dctrl.dish.description}}</p>
+                	<p>Comment: {{Dctrl.dish.comment}}</p>
+                	<p>Type your comment:
+             		<input type="text" ng-model="Dctrl.dish.comment"></p>
+	            	</div>
+            </div>
+            <div class="col-xs-9 col-xs-offset-1">
+                <div class="tab-content">
+
+                	<ul class="media-list tab-pane fade in active">
+                		<li class="media" ng-repeat="comment in Dctrl.dish.comments">
+                		<blockquote>
+                			<p>{{comment.ratin}ggma}i</p>
+                			<p>{{comment.comment}}</p>
+                			<footer>
+                				{{comment.date | date:'MM/dd/yyyy'}}
+                				<cite title="author">
+                					{{comment.author}}
+                				</cite>
+            				</footer>
+                			
+                		</blockquote>
+		            	
+	        		</li>	
+                	</ul>
+                </div>
+	   			
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script>
+
+        var app = angular.module('confusionApp',[]);
+        
+        app.controller('dishDetailController', function() {
+
+            var dish={
+                          name:'Uthapizza',
+                          image: 'images/uthapizza.png',
+                          category: 'mains', 
+                          label:'Hot',
+                          price:'4.99',
+                          description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',
+                           comments: [
+                               {
+                                   rating:5,
+                                   comment:"Imagine all the eatables, living in conFusion!",
+                                   author:"John Lemon",
+                                   date:"2012-10-16T17:57:28.556094Z"
+                               },
+                               {
+                                   rating:4,
+                                   comment:"Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
+                                   author:"Paul McVites",
+                                   date:"2014-09-05T17:57:28.556094Z"
+                               },
+                               {
+                                   rating:3,
+                                   comment:"Eat it, just eat it!",
+                                   author:"Michael Jaikishan",
+                                   date:"2015-02-13T17:57:28.556094Z"
+                               },
+                               {
+                                   rating:4,
+                                   comment:"Ultimate, Reaching for the stars!",
+                                   author:"Ringo Starry",
+                                   date:"2013-12-02T17:57:28.556094Z"
+                               },
+                               {
+                                   rating:2,
+                                   comment:"It's your birthday, we're gonna party!",
+                                   author:"25 Cent",
+                                   date:"2011-12-02T17:57:28.556094Z"
+                               }
+                               
+                           ]
+                    };
+            
+            this.dish = dish;
+            
+        });
+
+    </script>
+
+</body>
+
+</html>

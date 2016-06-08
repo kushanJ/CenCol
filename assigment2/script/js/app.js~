@@ -43,24 +43,43 @@ console.log(EM)
 	var name = document.getElementById("name");
 	name.innerHTML = "Name"
 	
-var phone_no = document.getElementById("phone_no");
-phone_no.innerHTML = "Phone Number"
-var email = document.getElementById("email");
-email.innerHTML = "Email"
-var message = document.getElementById("message");
-message.innerHTML = "Message"
-var submit = document.getElementById("Send");
-document.addEventListener("click", function(e){
-	e.preventDefault();
-	console.log(e.target.id);
-});
-console.log(submit)
-submit.innerHTML = "Submit";
-var lname = document.getElementById("lname")
-lname.innerHTML = "Last Name"
-console.log(lname)
-var cancel = document.getElementById("cancel");
-cancel.innerHTML = "cancel"
+	var phone_no = document.getElementById("phone_no");
+	phone_no.innerHTML = "Phone Number"
+	var email = document.getElementById("email");
+	email.innerHTML = "Email"
+	var message = document.getElementById("message");
+	message.innerHTML = "Message"
+	var submit = document.getElementById("Send");
+	console.log(submit)
+	submit.innerHTML = "Submit";
+	var lname = document.getElementById("lname")
+	lname.innerHTML = "Last Name"
+	console.log(lname)
+	
+	var data = [];
+	submit.addEventListener("click", function(e){
+		e.preventDefault();
+		console.log(e.target.id);
+		console.log(name.nextElementSibling.children[0].value);
+		data[0] =  name.nextElementSibling.children[0].value
+
+		console.log(lname.nextElementSibling.children[0].value);
+		data[1] =  lname.nextElementSibling.children[0].value
+
+		console.log(phone_no.nextElementSibling.children[0].value);
+		data[2] =  phone_no.nextElementSibling.children[0].value 
+
+		console.log(email.nextElementSibling.children[0].value);
+		data[3] =  email.nextElementSibling.children[0].value
+
+		console.log(message.nextElementSibling.children[0].value);
+		data[4] =  message.nextElementSibling.children[0].value
+		
+		console.log(data);
+
+	});
+	var cancel = document.getElementById("cancel");
+	cancel.innerHTML = "cancel"
 	}
 
 	function homeText(){

@@ -1,31 +1,34 @@
 console.log("-In js-");
 
+/* main JavaScript file */
+// IIFE - Immediately Invoked Function Expression
 
+//Kushan, 300873962, Mini portfolio.
 
 
 (function(){
 	"use strict"
-	
+	// create a reference to the contact nav bar content
 	var contact = document.getElementsByClassName("contact")[0];
 	contact.innerHTML = "Contact";
-	
+		// create a reference to the project nav bar content
 	var contact = document.getElementsByClassName("project")[0];
 	contact.innerHTML = "Projects"
-
+	// create a reference to the home nav bar content
 	var contact = document.getElementsByClassName("home")[0];
 	contact.innerHTML = "Home"
 
-	
+	// create a reference to the privacy policy
 	var pp = document.getElementsByClassName("pp")[0];
-console.log(pp)
+	console.log(pp)
 	pp.innerHTML = "Privacy Policy"
 	
-	
+	// create a reference to the Email webmaster
 	var EM = document.getElementsByClassName("EM")[0];
 console.log(EM)
 	EM.innerHTML = "Email Webmaster"				
 	
-
+	// reading url of the browser and checking with respect to html pages
 	var url = window.location.pathname.split("/");
 	console.log(url[url.length - 1])
 	if(url[url.length - 1] === "index.html"){
@@ -35,7 +38,7 @@ console.log(EM)
 	} else if(url[url.length - 1] === "contact.html"){
 		contactText();
 	}
-	
+	// for contact.html
 	function contactText(){
 	var contact = document.getElementById("contactME");
 	contact.innerHTML = "Contact Me:-"
@@ -55,8 +58,9 @@ console.log(EM)
 	var lname = document.getElementById("lname")
 	lname.innerHTML = "Last Name"
 	console.log(lname)
-	
+	// array to show the output of user entered data	
 	var data = [];
+	// click event on submit referrence
 	submit.addEventListener("click", function(e){
 		e.preventDefault();
 		console.log(e.target.id);
@@ -74,7 +78,7 @@ console.log(EM)
 
 		console.log(message.nextElementSibling.children[0].value);
 		data[4] =  message.nextElementSibling.children[0].value
-		
+		//showing the stored data
 		console.log(data);
 
 	});
@@ -82,8 +86,10 @@ console.log(EM)
 	cancel.innerHTML = "cancel"
 	}
 
+	//for home.html	
 	function homeText(){
 	console.log("In home")	
+	// hitting the dom to get the id and writing string
 
 	var h1 = document.getElementById("heading1");
 	h1.innerHTML = "Welcome!"+"<br>"+" To my portfolio";
@@ -106,7 +112,7 @@ console.log(EM)
 	pro_txt.innerHTML = "More >>"
 
 	}
-
+	// for project.html
 	function projectText(){
 			console.log("In roject")
 		var proIntro = document.getElementById("proIntro");

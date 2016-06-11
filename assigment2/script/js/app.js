@@ -64,19 +64,19 @@ console.log(EM)
 	submit.addEventListener("click", function(e){
 		e.preventDefault();
 		console.log(e.target.id);
-		console.log(name.nextElementSibling.children[0].value);
+		console.log("name = " + name.nextElementSibling.children[0].value);
 		data[0] =  name.nextElementSibling.children[0].value
 
-		console.log(lname.nextElementSibling.children[0].value);
+		console.log("lastname = " + lname.nextElementSibling.children[0].value);
 		data[1] =  lname.nextElementSibling.children[0].value
 
-		console.log(phone_no.nextElementSibling.children[0].value);
+		console.log("phone = " + phone_no.nextElementSibling.children[0].value);
 		data[2] =  phone_no.nextElementSibling.children[0].value 
 
-		console.log(email.nextElementSibling.children[0].value);
+		console.log("email = " + email.nextElementSibling.children[0].value);
 		data[3] =  email.nextElementSibling.children[0].value
 
-		console.log(message.nextElementSibling.children[0].value);
+		console.log("message = " + message.nextElementSibling.children[0].value);
 		data[4] =  message.nextElementSibling.children[0].value
 		//showing the stored data
 		console.log(data);

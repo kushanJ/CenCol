@@ -1,7 +1,7 @@
 // setup your IIFE (Immediately Invoked Function Expression)
 (function () {
 "use strict";
-
+// populated the html content of the document
 document.getElementById("IntroParagraph").innerHTML = "Now is the time to travel to Greece. The country may be going through an economic crisis, but many travellers say that it hasn't impacted the experience of visiting. Plus, there may be some great deals. Greece has 1,400 islands, though only 230 of them are inhabited. And while everyone knows about Santorini and Mykonos, there are gorgeous lesser-known islands in Greece, too."
 
 
@@ -30,11 +30,12 @@ document.getElementById("Gavdos").innerHTML = "Near the more well-known Crete, G
 
 document.getElementById("Milos").innerHTML = "This volcanic island, with catacombs and ancient iron mines to explore, is dramatically rugged, and famous for its stunning rock formations. Often likened to a moonscape, it's also known for its hot springs, the ancient Venus De Milo statue that was found here, and for its diversity of incredible beaches. Known as the island of colours it's home to around 80 beaches — some only accessible by boat — ranging from stunningly white, to striking black, and even unusual red and grey. However, each beach has the same Evian-clear turquoise waters, and is surrounded by a rugged mountain landscape."
 
+//Event Listner to submit button
 document.getElementById("sendButton").addEventListener("click", function(event){
-    event.preventDefault();
-    output();
+    event.preventDefault(); //preventing default action of submit button
+    output(); 
 });
-
+//envoking function to output in console on submit
 function output(){
 	var firstName = document.getElementById("firstName").value
 
